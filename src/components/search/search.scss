@@ -1,0 +1,200 @@
+@keyframes shin {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: .3;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.container {
+  background-color: #FAF7EE;
+
+  .header {
+    height: 60px;
+    padding-left: 30px;
+    border-bottom: solid 1px #D7D5D2;
+    display: flex;
+    align-items: center;
+    >div{
+      &:nth-child(1){
+        font-weight: bold;
+        font-size: 20px;
+        margin-right: 20px;
+      }
+      &:nth-child(2){
+        flex: 1;
+        display: flex;
+        align-items: center;
+        > input {
+          flex: 1;
+          outline: none;
+          padding-left: 10px;
+          max-width: 1200px;
+          margin-right: 10px;
+          height: 40px;
+          box-sizing: border-box;
+          border: solid 1px #D7D5D2;
+          border-radius: 4px;
+          background-color: transparent;
+        }
+        > button {
+          margin-right: 20px;
+          height: 40px;
+          border: solid 1px #dddddd;
+          border-radius: 4px;
+          padding: 0 20px;
+          background-color: transparent;
+
+          &:hover{
+            cursor: pointer;
+          }
+
+          .img {
+            width: 20px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .con {
+    margin: 50px auto 0 auto;
+    max-width: 1000px;
+    padding: 0 10px;
+
+    .title{
+      color: #666;
+    }
+
+    .block{
+      &-1{
+        .loading{
+          padding: 20px 0;
+          animation: shin .3s infinite;
+          >div{
+            background-color: #E0DDD4;
+            &:nth-child(1){
+              height: 10px;
+              width: 200px;
+            }
+            &:nth-child(2){
+              margin-top: 10px;
+              width: 300px;
+              height: 200px;
+            }
+          }
+        }
+        .bar{
+          margin: 20px 0;
+          height: 200px;
+          max-width: 500px;
+          background-color: white;
+          border: solid 1px #D7D5D2;
+          padding: 20px;
+        }
+      }
+      &-2{
+        .loading{
+          display: flex;
+          animation: shin .3s infinite;
+          >div{
+            padding: 20px 0;
+            flex: 1;
+            >div{
+              background-color: #E0DDD4;
+              &:nth-child(1){
+                height: 10px;
+                width: 100px;
+              }
+              &:nth-child(2){
+                margin: 10px 0;
+                height: 10px;
+                width: 60px;
+              }
+              &:nth-child(3){
+                height: 180px;
+              }
+            }
+            &:nth-child(n+2){
+              margin-left: 20px;
+            }
+          }
+        }
+        .area{
+          margin: 20px 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+          gap: 10px;
+
+          .chart{
+            height: 200px;
+            background-color: white;
+            padding: 20px 0;
+          }
+        }
+      }
+      &-3{
+        .loading{
+          animation: shin .3s infinite;
+          padding: 20px 0;
+          display: grid;
+          grid-template-columns: repeat(4,1fr);
+          gap: 10px;
+          .item{
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            >div{
+              background-color:#E0DDD4;
+              &:nth-child(1){
+                margin-bottom: 10px;
+                height: 150px;
+              }
+              &:nth-child(2){
+                flex: 1;
+              }
+            }
+          }
+        }
+        .product-list{
+          padding: 20px 0;
+          display: grid;
+          grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+          gap: 10px;
+          .item{
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            transition: all .3s;
+            &:hover{
+              opacity: .7;
+              cursor: pointer;
+            }
+            >div{
+              &:nth-child(1){
+                height: 200px;
+                img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              &:nth-child(2){
+                padding: 16px;
+                >div{
+                  color: #999999;
+                  font-size: 14px;
+                  line-height: 26px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

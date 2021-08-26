@@ -1,0 +1,39 @@
+.report {
+  margin: 10px auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: white;
+
+  .header {
+    padding-bottom: 20px;
+    border-bottom: solid 1px #EEEEEE;
+    text-align: right;
+    color: #999999;
+  }
+
+  .container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,1fr));
+    gap: 10px;
+
+    >div{
+      background-color: #F1F3F4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s;
+      height: 100px;
+
+      &.active{
+        background-color: #53A0FB;
+        color: white;
+      }
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+}
