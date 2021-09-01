@@ -12,6 +12,16 @@ interface routeType {
 
 const routes: Array<routeType> = [
     {
+        path: `/product/:productId`,
+        component: lazy(() => import('@com/product/product')),
+        exact: true
+    },
+    {
+        path: `/search/:keyword`,
+        component: lazy(() => import('@com/search2/search')),
+        exact: true
+    },
+    {
         path: `/index`,
         component: lazy(() => import('@com/index')),
         exact: true

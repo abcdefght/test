@@ -1,19 +1,28 @@
 import request from "@/api/request";
 
 // 搜索
-export const search=(keyword:string)=>{
+export const search = (keyword: string) => {
     return request({
-        url:`/interview/keyword_search`,
-        method:`POST`,
-        data:{
-            login_token:'INTERVIEW_SIMPLY2021',
-            search_phrase:keyword
+        url: `/interview/keyword_search`,
+        method: `POST`,
+        data: {
+            login_token: 'INTERVIEW_SIMPLY2021',
+            search_phrase: keyword
         }
     })
 }
 
-
-
+// 根据id获取产品
+export const getProductById = (productId:number) => {
+    return request({
+        url: `/interview/get_product_by_id`,
+        method: `POST`,
+        data: {
+            login_token: 'INTERVIEW_SIMPLY2021',
+            id: productId
+        }
+    })
+}
 
 // 【查询】主页信息
 export const getIndex = (id: number) => {
@@ -61,5 +70,7 @@ export const addReport = (time: string) => {
         data: {time}
     })
 }
+
+
 
 
